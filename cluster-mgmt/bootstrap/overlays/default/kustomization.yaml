@@ -3,7 +3,7 @@ kind: Kustomization
 
 bases:
 - ../../base
-# - ../../../components/applicationsets
+- ../../../components/applicationsets
 # - ../../../components/argocdproj
 
 resources:
