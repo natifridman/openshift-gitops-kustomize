@@ -4,4 +4,5 @@ kind: Kustomization
 resources: 
 - acm-subscription.yaml
 - acm-ns.yaml
+- acm-operator-group.yaml
 # - acm-multi-cluster-hub.yaml
