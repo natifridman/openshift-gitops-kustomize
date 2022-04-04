@@ -7,6 +7,7 @@ metadata:
   annotations:
     agent-install.openshift.io/install-config-overrides: '{"networking":{"networkType":"OVNKubernetes"}}'
     argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
+    argocd.argoproj.io/sync-wave: "1"
 spec:
   apiVIP: 10.50.56.98
   #apiVIP: fd00:6:6:2056::98

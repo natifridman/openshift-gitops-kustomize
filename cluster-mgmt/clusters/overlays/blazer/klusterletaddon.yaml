@@ -6,6 +6,7 @@ metadata:
   namespace: blazer-cars-lab
   annotations:
     argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
+    argocd.argoproj.io/sync-wave: "3"
 spec:
   clusterName: blazer-cars-lab
   clusterNamespace: blazer-cars-lab
