@@ -20,15 +20,6 @@ resources:
 
 patches:
   - target:
-      kind: SealedSecret
-    patch: |-
-      - op: replace
-        path: /metadata/namespace
-        value: 'blazer-cars-lab'
-      - op: replace
-        path: /spec/template/metadata/namespace
-        value: 'blazer-cars-lab'
-  - target:
       version: v1
       kind: Namespace
     patch: |-
