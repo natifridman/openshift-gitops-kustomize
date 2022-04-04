@@ -4,6 +4,9 @@ metadata:
   creationTimestamp: null
   name: bmc-super1-blazer-cars-lab
   namespace: blazer-cars-lab
+  annotations:
+    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
+    argocd.argoproj.io/sync-wave: "1"
 spec:
   encryptedData:
     password: AgABJnnn7UAJOIV3riKvihtjHtRNoOuWI7MINkE6oUbSOmWr92MKbhn9lNJfcTThw4PSQHDyohf2TNrQsVbytqzYauVSlpPuY3RAv0ZxqYwWwHDHBf0fSatxLHHCS5MqAYHC5b2RX9BeAjrAmPeBPCyE+GgvhL6gJlzMqSWkNjj5y/bPncsOgCsrrf+CPa3OaCMIB8h4le9y2Lfm/wEvbtYdYWF1VRp54SQ/HkOWvSI4kDnrEdKRggrT54XL/Mecvj16IFyOioJvZH1vcIwsMKz7dYlx4YgDPywiVRXolGclQ9DfKC2QPJZ4NWlsn5VL7tOGhrkke8mbjtJQiIy4cH7vfh359tSSuwhWFkzQoX0y9NZUPgyuUz3gDRAlEoSRL9PtLW0/Pq8gqSvaYdOsvh/hBZinnTepSOA4m1dnKyoivb9e4gGVoVcPSt9ZMfUnLvY/MxEisCG7Bawwd7PP0+DqioFVPJzzR1muLJ5Jrqx01a6wX6Vn5ckgJxdc9pDhYkIWZJ/S8TYHx5UUKiOXMF1XyXGuMkv0QwJXB37kK3twJqKtaUyTLfdkpKLGz76BUJu7DeCSblcBVFfH3rcZXjf5TCOSoqf1hwkyJ/jBKnKvQBGQb1S2GAmAmPifqagY62+avmthIE2AnZa2/uLxJX9LhykKNduh07BEKhExFv5Cw9OO8lZ2obR/rcuULiyKi8GbtLyii7uiannexlo=
