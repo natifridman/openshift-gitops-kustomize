@@ -6,6 +6,7 @@ bases:
   - ../../base
 
 resources:
+- pullsecret-sealed.yaml
 - aci.yaml
 - clusterdeployment.yaml
 - infraenv-blazer-cars-lab.yaml
