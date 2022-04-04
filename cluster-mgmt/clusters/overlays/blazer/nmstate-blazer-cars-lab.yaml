@@ -51,6 +51,7 @@ metadata:
   namespace: blazer-cars-lab
   annotations:
     argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
+    argocd.argoproj.io/sync-wave: "6"
   labels:
     cluster-name: blazer-nmstate
 spec:
@@ -95,6 +96,7 @@ metadata:
   namespace: blazer-cars-lab
   annotations:
     argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
+    argocd.argoproj.io/sync-wave: "6"
   labels:
     cluster-name: blazer-nmstate
 spec:
