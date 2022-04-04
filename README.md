@@ -15,16 +15,22 @@ until kubectl apply -k https://github.com/natifridman/openshift-gitops-kustomize
 |   |           |-- kustomization.yaml
 |   |           |-- openshift-gitops-argocd.yaml
 |   |           `-- openshift-gitops-rbac-policy.yaml
+|   |-- clusters
+|   |   |-- base
+|   |   `-- overlays
 |   |-- components
 |   |   `-- applicationsets
-|   |       `-- core-components-appset.yaml
+|   |       |-- clusters-appset.yaml
+|   |       |-- core-components-appset.yaml
+|   |       `-- kustomization.yaml
 |   `-- core
-|       |-- acm-operator
-|       |   |-- acm-multi-cluster-hub.yaml
-|       |   |-- acm-subscription.yaml
+|       |-- advanced-cluster-management
 |       |   `-- kustomization.yaml
-|       `-- gitops-controller
-|           `-- kustomization.yaml
+|       |-- gitops-controller
+|       |   `-- kustomization.yaml
+|       `-- sealed-secrets
+|           |-- kustomization.yaml
+|           `-- namespace.yaml
 |-- LICENSE
 `-- README.md
 ```
