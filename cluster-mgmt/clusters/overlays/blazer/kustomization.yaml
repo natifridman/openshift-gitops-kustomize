@@ -1,0 +1,39 @@
+---
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+bases:
+  - ../../base
+
+resources:
+- aci.yaml
+- clusterdeployment.yaml
+- infraenv-blazer-cars-lab.yaml
+- klusterletaddon.yaml
+- managedcluster.yaml
+- nmstate-blazer-cars-lab.yaml
+- bmc-super1-blazer-cars-lab-sealed.yaml
+- bmc-super2-blazer-cars-lab-sealed.yaml
+- bmc-super3-blazer-cars-lab-sealed.yaml
+- bmh-blazer-cars-lab-cplane.yaml
+
+patches:
+  - target:
+      kind: SealedSecret
+    patch: |-
+      - op: replace
+        path: /metadata/namespace
+        value: 'blazer-cars-lab'
+      - op: replace
+        path: /spec/template/metadata/namespace
+        value: 'blazer-cars-lab'
+  - target:
+      version: v1
+      kind: Namespace
+    patch: |-
+      - op: replace
+        path: /metadata/labels/name
+        value: 'blazer-cars-lab'
+      - op: replace
+        path: /metadata/name
+        value: 'blazer-cars-lab'
