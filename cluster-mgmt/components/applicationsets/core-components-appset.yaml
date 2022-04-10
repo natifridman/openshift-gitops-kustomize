@@ -29,7 +29,5 @@ spec:
         repoURL: https://github.com/natifridman/openshift-gitops-kustomize
         targetRevision: main
         path: '{{path}}'
-        plugin:
-          name: argocd-vault-plugin
       destination:
         server: https://kubernetes.default.svc
