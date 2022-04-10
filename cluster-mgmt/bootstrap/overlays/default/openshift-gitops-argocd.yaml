@@ -79,6 +79,33 @@ spec:
       requests:
         cpu: 250m
         memory: 256Mi
+    initContainers:
+      - args:
+          - >-
+            curl -Lo /custom-tools/argocd-vault-plugin
+            https://github.com/argoproj-labs/argocd-vault-plugin/releases/download/v${AVP_VERSION}/argocd-vault-plugin_${AVP_VERSION}_linux_amd64
+            && chmod +x /custom-tools/argocd-vault-plugin
+        command:
+          - /bin/bash
+          - '-c'
+        env:
+          - name: AVP_VERSION
+            value: 1.8.0
+        image: 'registry.redhat.io/ubi8/ubi:latest'
+        name: download-tools
+        resources: {}
+        volumeMounts:
+          - mountPath: /custom-tools
+            name: custom-tools
+    mountsatoken: true
+    serviceaccount: vplugin
+    volumeMounts:
+      - mountPath: /usr/local/bin/argocd-vault-plugin
+        name: custom-tools
+        subPath: argocd-vault-plugin
+    volumes:
+      - emptyDir: {}
+        name: custom-tools
   resourceCustomizations: |
     bitnami.com/SealedSecret:
       health.lua: |
