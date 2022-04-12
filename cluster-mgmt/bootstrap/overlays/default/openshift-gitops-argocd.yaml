@@ -72,6 +72,8 @@ spec:
         cpu: 250m
         memory: 128Mi
   repo:
+    mountsatoken: true
+    serviceaccount: vplugin
     resources:
       limits:
         cpu: "1"
@@ -121,5 +123,12 @@ spec:
         termination: edge
     service:
       type: ""
+  image: quay.io/nafridma/argovault-plugin
+  Version: v1.0
+  configManagementPlugins: |-
+    - name: argocd-vault-plugin
+      generate:
+        command: ["argocd-vault-plugin"]
+        args: ["generate", "./"]
   tls:
     ca: {}
