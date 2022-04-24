@@ -75,7 +75,7 @@ spec:
     image: quay.io/nafridma/argovault-plugin
     version: v1.0
     mountsatoken: true
-    serviceaccount: vplugin
+    serviceaccount: openshift-gitops-argocd-application-controller
     resources:
       limits:
         cpu: "1"
