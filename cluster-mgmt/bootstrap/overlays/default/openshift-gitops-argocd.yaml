@@ -74,7 +74,7 @@ spec:
   repo:
     env:
       - name: AVP_K8S_ROLE
-        value: openshift-gitops-argocd-application-controller
+        value: vplugin
       - name: AVP_TYPE
         value: vault
       - name: VAULT_ADDR
@@ -103,7 +103,7 @@ spec:
       - emptyDir: {}
         name: vault-plugin
     mountsatoken: true
-    serviceaccount: openshift-gitops-argocd-application-controller
+    serviceaccount: vplugin
     resources:
       limits:
         cpu: "1"
