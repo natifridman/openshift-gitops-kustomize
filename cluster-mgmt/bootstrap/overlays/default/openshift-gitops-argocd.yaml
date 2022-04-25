@@ -78,7 +78,7 @@ spec:
       - name: AVP_TYPE
         value: vault
       - name: VAULT_ADDR
-        value: 'https://172.30.206.6:8200'
+        value: 'http://172.30.206.6:8200'
       - name: AVP_AUTH_TYPE
         value: k8s
     initContainers:
