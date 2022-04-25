@@ -72,8 +72,27 @@ spec:
         cpu: 250m
         memory: 128Mi
   repo:
-    image: quay.io/nafridma/argovault-plugin
-    version: v1.8
+    initContainers:
+      - command:
+          - /bin/sh
+          - '-c'
+          - >-
+            curl -v  -LJ --tls-max 1.2
+            https://github.com/argoproj-labs/argocd-vault-plugin/releases/download/v1.7.0/argocd-vault-plugin_1.7.0_linux_amd64
+            -o argocd-vault-plugin && chmod -v +x argocd-vault-plugin
+        image: 'registry.redhat.io/ubi8/ubi:latest'
+        name: install-vault
+        volumeMounts:
+          - mountPath: /vault-plugin
+            name: vault-plugin
+        workingDir: /vault-plugin
+    volumeMounts:
+      - mountPath: /usr/local/bin/argocd-vault-plugin
+        name: vault-plugin
+        subPath: argocd-vault-plugin
+    volumes:
+      - emptyDir: {}
+        name: vault-plugin
     mountsatoken: true
     serviceaccount: openshift-gitops-argocd-application-controller
     resources:

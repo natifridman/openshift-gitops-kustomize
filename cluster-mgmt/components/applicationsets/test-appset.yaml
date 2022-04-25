@@ -31,14 +31,5 @@ spec:
         path: '{{path}}'
         plugin:
           name: argocd-vault-plugin
-          env:
-            - name: AVP_K8S_ROLE
-              value: vplugin
-            - name: AVP_TYPE
-              value: vault
-            - name: AVP_VAULT_ADDR
-              value: 'http://172.30.206.6:8200'
-            - name: AVP_AUTH_TYPE
-              value: k8s
       destination:
         server: https://kubernetes.default.svc
