@@ -76,7 +76,7 @@ spec:
       - name: AVP_TYPE
         value: vault
       - name: VAULT_ADDR
-        value: 'http://vault-vault.apps.db5.cars.lab/:8200'
+        value: 'http://vault-vault.apps.db5.cars.lab'
       - name: AVP_AUTH_TYPE
         value: approle
       - name: AVP_ROLE_ID
