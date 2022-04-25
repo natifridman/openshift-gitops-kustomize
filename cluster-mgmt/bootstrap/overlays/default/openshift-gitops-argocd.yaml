@@ -73,14 +73,16 @@ spec:
         memory: 128Mi
   repo:
     env:
-      - name: AVP_K8S_ROLE
-        value: vplugin
       - name: AVP_TYPE
         value: vault
       - name: VAULT_ADDR
-        value: 'http://172.30.206.6:8200'
+        value: 'http://vault-vault.apps.db5.cars.lab/:8200'
       - name: AVP_AUTH_TYPE
-        value: k8s
+        value: approle
+      - name: AVP_ROLE_ID
+        value: '811ff2bc-af17-b878-e9b0-6b51225fa267'
+      - name: AVP_SECRET_ID
+        value: 1527eaaa-5609-2673-5209-eb2ad6d645d8
     initContainers:
       - command:
           - /bin/sh
