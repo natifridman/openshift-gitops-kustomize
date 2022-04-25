@@ -74,7 +74,7 @@ spec:
   repo:
     env:
       - name: AVP_K8S_ROLE
-        value: vplugin
+        value: openshift-gitops-argocd-application-controller
       - name: AVP_TYPE
         value: vault
       - name: VAULT_ADDR
