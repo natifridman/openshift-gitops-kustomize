@@ -9,7 +9,7 @@ spec:
       repoURL: https://github.com/natifridman/openshift-gitops-kustomize
       revision: main
       directories:
-      - path: cluster-mgmt/test
+      - path: cluster-mgmt/test/*
   template:
     metadata:
       name: '{{path.basename}}'
