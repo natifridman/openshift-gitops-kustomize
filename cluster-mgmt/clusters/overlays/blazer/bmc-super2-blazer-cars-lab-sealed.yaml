@@ -1,23 +1,13 @@
-apiVersion: bitnami.com/v1alpha1
-kind: SealedSecret
+kind: Secret
+apiVersion: v1
 metadata:
-  creationTimestamp: null
   name: bmc-super2-blazer-cars-lab
   namespace: blazer-cars-lab
   annotations:
     argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
     argocd.argoproj.io/sync-wave: "1"
-spec:
-  encryptedData:
-    password: AgARcqauBlMGMo7WT0SXWpgTvqGIYyizpJn+/o0yjhz99yqKg0ik7SD5xCJtmU27B+djcxfnR3B7efndV/kRoS4XZ01vmEM09LVW6H+z+BJiy8xM3u5rFlLDTYggZ0nibPyunoIujN2mxPRvSe/tgeE2ObsmwofCfG77t9tI+/SEwguNheKiR1ZI31Z+3PeANxHo1630l461TUSzx++eFfIwyNejGZVxLmitXRLjvzgu0bYubIWgHkGnSeE45DYDA7jgxmrgL0AnmSOwe48yQY+EDoUPvJcVxA6vIEW75Y8RmPhADQum/I0S3TETBJZI7tWxznYCQblrCf8Rm141IkPTMkpaXZyfEUcgcP47n/ys0lxsxf2M6DQri3LaFzYOJxTRiAGXK/XtuXg70iHm6VIxJXAlcLRrc3ojGxQxFrFvk5QCdyd6JJ55HXwezR5DJ/yJVwVQ7pafIhWcc0TB2zuI6FhduM8wS6sV09AKQ+kUzUyKCwWsElpi4+FIPRj2Cml40jvz7a6mLBdxCWqOSGz4SaFron+qiVQZBBk1ZMTZDBMvY2eLZygs4MQ5YiWebPH6hHn6nYfPoWRmWRZMW3f6g3IPZoJJ0yZPck3vuJIb7J2i3ykZd4nVMHMzNfo/CaDyu5u6HBzG5v0OFOMRn2oFGy4eYRPXRWowRdn/JAMJ3tYV8aK7OM4CtDqtDOzNr1sRbKa8OdQ9H5SSnOM=
-    username: AgCDCYBAF8Sq207VMzWAWpDJ+NnORNu0zC2GMqz0qQFrGeHLsJs3hnb/5oBPwvZKDBa+ccc7boojO/iqHPDGUS50TLwZ3sZHdwnjOeab7zRzPZWE4PkdSgoYlTzvGraQVzuhD8ZInbTsVDHxY4vA3o7J0z1TuJVB5bg05ZrpEVzDZ797PbySH0BnKUtLcF/SMlItLhH9ZW4JTeiTl1W5CHQ1w+PaYtdCy+hD0FTxUPzv+HOLnfNR8RTk52goSBpZY+Of4J7kihY5DBoLYUJZILZHVQdyADjQ5AgbpAZQBIGGrHOwcjExHUfPWMqTcWd+LsMQ7cJ8RiYaZYfwyFw2moBBySw79d6So1mibTkAIQ0GK9k4qAovmUN3PXbMdvK+mOVMVnqUVjUZLm7Q4KZAJLj1TonI32Myn57cFUBmdtBN90W7d0beRzS4yAfbe25r966j/WUzTNdyl0WE6pdRLebX5ie/9e4W1EICYCZdVY+++oRZZDFJvstVeecw7Hv7TvzF9MaT6pHbrB2pH3yWtxJ9+l3C1SgOqOXhy+e8CFPCYgVp6RMSXHtV7zeMHQToCcFrC9YDCIQHaYtHnD98l8MP9KJyr0P3CZM/F20H43qCz0wH8QE4gInTj0U54ICm59yoK5rmL5ZlhweiRAbjXbbf4uFOogJJErR/RheJNKpvtm9WpFhmAVKOii0olU5YXuRu5+y/
-  template:
-    data: null
-    metadata:
-      annotations:
-        argocd.argoproj.io/sync-wave: "1"
-      creationTimestamp: null
-      name: bmc-super2-blazer-cars-lab
-      namespace: blazer-cars-lab
-    type: Opaque
-
+    avp_path: "secret/data/vplugin/bmc"
+type: Opaque
+stringData:
+  username: <username>
+  password: <password> 

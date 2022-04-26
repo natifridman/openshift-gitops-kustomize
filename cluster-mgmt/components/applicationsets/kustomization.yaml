@@ -4,4 +4,4 @@ kind: Kustomization
 resources:
 - core-components-appset.yaml
 - test-appset.yaml
-#- clusters-appset.yaml
+- clusters-appset.yaml
