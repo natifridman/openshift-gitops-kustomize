@@ -127,13 +127,11 @@ spec:
   resourceExclusions: |
     - apiGroups:
       - tekton.dev
-      - internal.open-cluster-management.io
       clusters:
       - '*'
       kinds:
       - TaskRun
       - PipelineRun
-      - ManagedClusterInfo
   server:
     autoscale:
       enabled: false

@@ -33,7 +33,6 @@ spec:
       - cidr: fd00:6:6:2056::0/64
   provisionRequirements:
     controlPlaneAgents: 3
-    workerAgents: 0
 #  proxy:
 #    httpProxy: http://infra-registry.infra.cars.lab:3128
 #    httpsProxy: http://infra-registry.infra.cars.lab:3128
