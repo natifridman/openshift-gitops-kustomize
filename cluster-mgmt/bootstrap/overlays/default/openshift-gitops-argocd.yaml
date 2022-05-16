@@ -133,7 +133,6 @@ spec:
       kinds:
       - TaskRun
       - PipelineRun
-      - ManagedClusterInfo
   server:
     autoscale:
       enabled: false
