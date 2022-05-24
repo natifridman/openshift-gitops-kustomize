@@ -4,6 +4,8 @@ kind: ManagedCluster
 metadata:
   name: blazer-cars-lab
   namespace: blazer-cars-lab
+  labels:
+    local-argo: True
   annotations:
     argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
     argocd.argoproj.io/sync-wave: "4"
