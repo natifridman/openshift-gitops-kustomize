@@ -82,7 +82,7 @@ spec:
       - name: AVP_ROLE_ID
         value: '9d5f1031-0e0e-c9ef-963a-57b38ece6f8a'
       - name: AVP_SECRET_ID
-        value: d0ce6ef8-59fc-e449-72eb-62c195d2507d
+        value: b56dbde2-2f59-d0dd-f891-8a7bebc108c8
     initContainers:
       - command:
           - /bin/sh
