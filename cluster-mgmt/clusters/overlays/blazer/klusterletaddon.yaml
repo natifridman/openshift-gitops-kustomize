@@ -2,7 +2,7 @@
 apiVersion: agent.open-cluster-management.io/v1
 kind: KlusterletAddonConfig
 metadata:
-  name: klusterletaddonconfig-blazer-cars-lab
+  name: blazer-cars-lab
   namespace: blazer-cars-lab
   annotations:
     argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
