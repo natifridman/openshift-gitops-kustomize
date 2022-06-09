@@ -1,5 +1,6 @@
 # openshift-gitops-kustomize
-A repository for dpeloying Openshift clusters with ACM and Argo CD
+A repository for deploying Openshift clusters with ACM and Argo CD.
+All cluster lifecycle is managed by Argo CD, including Argo configuration itself.
 
 ## How to run it
 ```shell
