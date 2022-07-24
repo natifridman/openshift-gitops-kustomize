@@ -1,0 +1,12 @@
+- op: replace
+  path: /metadata/name
+  value: 'super2-blazer-cars-lab'
+- op: replace
+  path: /spec/bootMACAddress
+  value: 'DE:AD:BE:EF:9D:47'
+- op: replace
+  path: /spec/bmc/address
+  value: redfish-virtualmedia+http://kvmhost2.remote-skylark-ldc1.cars.lab:8082/redfish/v1/Systems/8273cc27-82c1-54dc-9eab-a75ea53f1ebf
+- op: replace
+  path: /spec/bmc/credentialsName
+  value: bmc-super2-blazer-cars-lab
