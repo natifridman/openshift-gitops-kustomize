@@ -1,12 +1,9 @@
 - op: replace
   path: /spec/clusterRef/name
-  value: 'blazer-cars-lab'
+  value: 'blazer-cars-lab-cluster'
 - op: replace
   path: /spec/clusterRef/namespace
   value: 'blazer-cars-lab'
 - op: replace
   path: '/spec/nmStateConfigLabelSelector/matchLabels/cluster-name'
   value: 'blazer-nmstate'
-- op: replace
-  path: /metadata/name
-  value: 'infraenv-blazer-cars-lab'

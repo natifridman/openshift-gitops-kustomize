@@ -1,3 +1,0 @@
-- op: replace
-  path: /metadata/name
-  value: 'bmc-super1-blazer-cars-lab'

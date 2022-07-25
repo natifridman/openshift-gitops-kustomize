@@ -4,4 +4,4 @@
 - op: replace
   path: /spec/clusterNamespace
   value: 'blazer-cars-lab'
-
+  

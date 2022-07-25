@@ -2,7 +2,7 @@
 apiVersion: agent-install.openshift.io/v1beta1
 kind: InfraEnv
 metadata:
-  name: infraenv-clustername
+  name: -infraenv
   namespace: clustername
   annotations:
     argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true

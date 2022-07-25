@@ -2,7 +2,7 @@
 apiVersion: agent.open-cluster-management.io/v1
 kind: KlusterletAddonConfig
 metadata:
-  name: clustername
+  name: -cluster
   namespace: clustername
   annotations:
     argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true

@@ -2,11 +2,7 @@
 apiVersion: agent-install.openshift.io/v1beta1
 kind: NMStateConfig
 metadata:
-  name: nmstate-super1-blazer-cars-lab
-  namespace: blazer-cars-lab
-  annotations:
-    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
-    argocd.argoproj.io/sync-wave: "6"
+  name: -nmstate-super1
   labels:
     cluster-name: blazer-nmstate
 spec:
@@ -47,11 +43,7 @@ spec:
 apiVersion: agent-install.openshift.io/v1beta1
 kind: NMStateConfig
 metadata:
-  name: nmstate-super2-blazer-cars-lab
-  namespace: blazer-cars-lab
-  annotations:
-    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
-    argocd.argoproj.io/sync-wave: "6"
+  name: -nmstate-super2
   labels:
     cluster-name: blazer-nmstate
 spec:
@@ -92,11 +84,7 @@ spec:
 apiVersion: agent-install.openshift.io/v1beta1
 kind: NMStateConfig
 metadata:
-  name: nmstate-super3-blazer-cars-lab
-  namespace: blazer-cars-lab
-  annotations:
-    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
-    argocd.argoproj.io/sync-wave: "6"
+  name: -nmstate-super3
   labels:
     cluster-name: blazer-nmstate
 spec:

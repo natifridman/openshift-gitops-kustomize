@@ -2,10 +2,13 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
+namespace: blazer-cars-lab
+namePrefix: blazer-cars-lab
+
 bases:
   - ../../base/3-node
 
-resources:
+patchesStrategicMerge:
 - nmstate-config.yaml
 
 patches:
@@ -21,53 +24,25 @@ patches:
     patch: |-
       - op: replace
         path: /spec/clusterDeploymentRef
+        value: 'blazer-cars-lab-cluster'
+  - target:
+      kind: SealedSecret
+    patch: |-
+      - op: replace
+        path: /spec/template/metadata/namespace
         value: 'blazer-cars-lab'
   - target:
-      version: v1
-      kind: Namespace
-    path: clustername-patch.yaml
-  - target:
-      kind: AgentClusterInstall
-    path: clustername-patch.yaml
-  - target:
-      kind: AgentClusterInstall
-    path: namespace-patch.yaml
-  - target:
       kind: BareMetalHost
-    path: namespace-patch.yaml
-  - target:
-      kind: Secret
-    path: namespace-patch.yaml
-  - target:
-      kind: Secret
-      name: super1
-    path: bmc-super1-blazer-cars-lab-sealed-patch.yaml
-  - target:
-      kind: Secret
-      name: super2
-    path: bmc-super1-blazer-cars-lab-sealed-patch.yaml
-  - target:
-      kind: Secret
-      name: super3
-    path: bmc-super1-blazer-cars-lab-sealed-patch.yaml
-  - target:
-      kind: BareMetalHost
-      name: super1
+      name: -super1
     path: bmh-blazer-cars-lab-super1-patch.yaml
   - target:
       kind: BareMetalHost
-      name: super2
+      name: -super2
     path: bmh-blazer-cars-lab-super2-patch.yaml
   - target:
       kind: BareMetalHost
-      name: super3
+      name: -super3
     path: bmh-blazer-cars-lab-super3-patch.yaml
-  - target:
-      kind: ClusterDeployment
-    path: clustername-patch.yaml
-  - target:
-      kind: ClusterDeployment
-    path: namespace-patch.yaml
   - target:
       kind: ClusterDeployment
     path: clusterdeployment-patch.yaml
@@ -75,20 +50,5 @@ patches:
       kind: InfraEnv
     path: infraenv-patch.yaml
   - target:
-      kind: InfraEnv
-    path: namespace-patch.yaml
-  - target:
-      kind: KlusterletAddonConfig
-    path: clustername-patch.yaml
-  - target:
-      kind: KlusterletAddonConfig
-    path: namespace-patch.yaml
-  - target:
       kind: KlusterletAddonConfig
     path: klusterletaddon-patch.yaml
-  - target:
-      kind: ManagedCluster
-    path: clustername-patch.yaml
-  - target:
-      kind: ManagedCluster
-    path: namespace-patch.yaml
