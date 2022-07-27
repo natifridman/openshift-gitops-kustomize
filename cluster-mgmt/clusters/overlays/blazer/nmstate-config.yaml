@@ -2,7 +2,7 @@
 apiVersion: agent-install.openshift.io/v1beta1
 kind: NMStateConfig
 metadata:
-  name: -nmstate-super1
+  name: nmstate-super1
   labels:
     cluster-name: blazer-nmstate
 spec:
@@ -43,7 +43,7 @@ spec:
 apiVersion: agent-install.openshift.io/v1beta1
 kind: NMStateConfig
 metadata:
-  name: -nmstate-super2
+  name: nmstate-super2
   labels:
     cluster-name: blazer-nmstate
 spec:
@@ -84,7 +84,7 @@ spec:
 apiVersion: agent-install.openshift.io/v1beta1
 kind: NMStateConfig
 metadata:
-  name: -nmstate-super3
+  name: nmstate-super3
   labels:
     cluster-name: blazer-nmstate
 spec:
