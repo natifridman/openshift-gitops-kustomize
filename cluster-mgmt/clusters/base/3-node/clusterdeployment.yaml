@@ -2,8 +2,8 @@
 apiVersion: hive.openshift.io/v1
 kind: ClusterDeployment
 metadata:
-  name: blazer-cars-lab
-  namespace: blazer-cars-lab
+  name: cluster
+  namespace: clustername
   annotations:
     argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
     argocd.argoproj.io/sync-wave: "2"
@@ -13,12 +13,12 @@ spec:
   clusterInstallRef:
     group: extensions.hive.openshift.io
     kind: AgentClusterInstall
-    name: blazer-cars-lab
+    name: clustername
     version: v1beta1
   platform:
     agentBareMetal:
       agentSelector:
         matchLabels:
-          cluster-name: blazer-cars-lab
+          cluster-name: clustername
   pullSecretRef:
     name: assisted-deployment-pull-secret

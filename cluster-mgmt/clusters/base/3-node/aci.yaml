@@ -2,8 +2,8 @@
 apiVersion: extensions.hive.openshift.io/v1beta1
 kind: AgentClusterInstall
 metadata:
-  name: blazer-cars-lab
-  namespace: blazer-cars-lab
+  name: cluster
+  namespace: cluster-name
   annotations:
     agent-install.openshift.io/install-config-overrides: '{"networking":{"networkType":"OVNKubernetes"}}'
     argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
@@ -14,7 +14,7 @@ spec:
   ingressVIP: 10.50.56.99
   #ingressVIP: fd00:6:6:2056::99
   clusterDeploymentRef:
-    name: blazer-cars-lab
+    name: cluster-name
   imageSetRef:
     name: openshift-v4.8.35
 #  manifestsConfigMapRef:

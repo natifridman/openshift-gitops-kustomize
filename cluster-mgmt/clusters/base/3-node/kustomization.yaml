@@ -1,0 +1,14 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+- namespace.yaml
+- pullsecret-sealed.yaml
+- aci.yaml
+- clusterdeployment.yaml
+- infraenv.yaml
+- klusterletaddon.yaml
+- managedcluster.yaml
+- bmc-secrets-sealed.yaml
+- bmh.yaml
+- nmstate-config.yaml
