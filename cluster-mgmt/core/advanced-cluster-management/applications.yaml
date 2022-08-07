@@ -1,0 +1,59 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: acm
+  namespace: openshift-gitops
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
+spec:
+  destination:
+    server: 'https://kubernetes.default.svc'
+  project: default
+  source:
+    path: cluster-mgmt/core/advanced-cluster-management/acm
+    repoURL: https://github.com/natifridman/openshift-gitops-kustomize
+    targetRevision: main
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: true
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: assisted-service
+  namespace: openshift-gitops
+  annotations:
+    argocd.argoproj.io/sync-wave: "2"
+spec:
+  destination:
+    server: 'https://kubernetes.default.svc'
+  project: default
+  source:
+    path: cluster-mgmt/core/advanced-cluster-management/assisted-service
+    repoURL: https://github.com/natifridman/openshift-gitops-kustomize
+    targetRevision: main
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: true
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: argo-clusters
+  namespace: openshift-gitops
+  annotations:
+    argocd.argoproj.io/sync-wave: "3"
+spec:
+  destination:
+    server: 'https://kubernetes.default.svc'
+  project: default
+  source:
+    path: cluster-mgmt/core/advanced-cluster-management/argo-clusters
+    repoURL: https://github.com/natifridman/openshift-gitops-kustomize
+    targetRevision: main
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: true
