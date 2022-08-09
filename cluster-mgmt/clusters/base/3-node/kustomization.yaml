@@ -3,7 +3,6 @@ kind: Kustomization
 
 resources:
 - namespace.yaml
-- pullsecret-sealed.yaml
 - aci.yaml
 - clusterdeployment.yaml
 - infraenv.yaml

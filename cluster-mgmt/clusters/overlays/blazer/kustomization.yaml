@@ -8,6 +8,9 @@ namePrefix: blazer-cars-lab-
 bases:
   - ../../base/3-node
 
+resources:
+- pullsecret-sealed.yaml
+
 patchesStrategicMerge:
 - nmstate-config.yaml
 
@@ -25,12 +28,6 @@ patches:
       - op: replace
         path: /spec/clusterDeploymentRef/name
         value: 'blazer-cars-lab-cluster'
-  - target:
-      kind: SealedSecret
-    patch: |-
-      - op: replace
-        path: /spec/template/metadata/namespace
-        value: 'blazer-cars-lab'
   - target:
       kind: BareMetalHost
       name: super1
