@@ -80,9 +80,9 @@ spec:
       - name: AVP_AUTH_TYPE
         value: approle
       - name: AVP_ROLE_ID
-        value: '28a1f77f-e9b1-3e2d-f9f3-5f2cb9c4888b'
+        value: '85df91f3-2bf1-57a6-1de1-223c1d3fd6f3'
       - name: AVP_SECRET_ID
-        value: 8a6a9ef7-8c15-5e90-b33a-60dac88df524
+        value: 50dc690c-8387-0dd6-b457-d6c1c596275a
     initContainers:
       - command:
           - /bin/sh
