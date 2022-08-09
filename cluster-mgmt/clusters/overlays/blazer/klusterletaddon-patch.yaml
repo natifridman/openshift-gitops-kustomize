@@ -1,6 +1,6 @@
 - op: replace
   path: /spec/clusterName
-  value: 'blazer-cars-lab'
+  value: 'blazer-cars-lab-cluster'
 - op: replace
   path: /spec/clusterNamespace
   value: 'blazer-cars-lab'
