@@ -10,3 +10,6 @@
 - op: replace
   path: /metadata/labels/infraenvs.agent-install.openshift.io
   value: blazer-cars-lab-infraenv
+- op: replace
+  path: /metadata/labels/app.kubernetes.io/instance
+  value: blazer-cars-lab-cluster
