@@ -89,7 +89,7 @@ spec:
           - '-c'
           - >-
             curl -v  -LJ --tls-max 1.2
-            https://github.com/argoproj-labs/argocd-vault-plugin/releases/download/v1.7.0/argocd-vault-plugin_1.7.0_linux_amd64
+            https://github.com/argoproj-labs/argocd-vault-plugin/releases/download/v1.8.0/argocd-vault-plugin_1.8.0_linux_amd64
             -o argocd-vault-plugin && chmod -v +x argocd-vault-plugin
         image: 'registry.redhat.io/ubi8/ubi:latest'
         name: install-vault
