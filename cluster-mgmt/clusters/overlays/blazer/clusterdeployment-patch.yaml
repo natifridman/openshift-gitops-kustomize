@@ -1,5 +1,5 @@
 - op: replace
-  path: /spec/clusterInstallRef
+  path: /spec/clusterInstallRef/name
   value: 'blazer-cars-lab-cluster'
 - op: replace
   path: '/spec/platform/agentBareMetal/agentSelector/matchLabels/cluster-name'

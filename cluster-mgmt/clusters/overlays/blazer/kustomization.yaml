@@ -23,7 +23,7 @@ patches:
       kind: AgentClusterInstall
     patch: |-
       - op: replace
-        path: /spec/clusterDeploymentRef
+        path: /spec/clusterDeploymentRef/name
         value: 'blazer-cars-lab-cluster'
   - target:
       kind: SealedSecret
