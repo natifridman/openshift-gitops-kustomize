@@ -7,3 +7,6 @@
 - op: replace
   path: /spec/clusterName
   value: 'blazer'
+- op: replace
+  path: '/spec/pullSecretRef/name'
+  value: 'blazer-cars-lab-assisted-deployment-pull-secret'
