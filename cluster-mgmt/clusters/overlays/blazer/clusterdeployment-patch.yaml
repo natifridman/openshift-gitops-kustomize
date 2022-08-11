@@ -1,12 +1,15 @@
 - op: replace
   path: /spec/clusterInstallRef/name
-  value: 'blazer-cars-lab-cluster'
+  value: 'blazer'
 - op: replace
   path: '/spec/platform/agentBareMetal/agentSelector/matchLabels/cluster-name'
-  value: 'blazer-cars-lab'
+  value: 'blazer'
 - op: replace
   path: /spec/clusterName
-  value: 'blazer-cars-lab-cluster'
+  value: 'blazer'
 - op: replace
   path: '/spec/pullSecretRef/name'
-  value: 'blazer-cars-lab-assisted-deployment-pull-secret'
+  value: 'assisted-deployment-pull-secret'
+- op: replace
+  path: /metadata/name
+  value: blazer

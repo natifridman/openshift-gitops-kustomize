@@ -1,6 +1,6 @@
 - op: replace
   path: /spec/clusterRef/name
-  value: 'blazer-cars-lab-cluster'
+  value: 'blazer'
 - op: replace
   path: /spec/clusterRef/namespace
   value: 'blazer-cars-lab'
@@ -9,4 +9,7 @@
   value: 'blazer-nmstate'
 - op: replace
   path: '/spec/pullSecretRef/name'
-  value: 'blazer-cars-lab-assisted-deployment-pull-secret'
+  value: 'assisted-deployment-pull-secret'
+- op: replace
+  path: /metadata/name
+  value: blazer-cars-lab-infraenv
