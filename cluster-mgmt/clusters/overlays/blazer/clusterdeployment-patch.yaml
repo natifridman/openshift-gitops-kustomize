@@ -3,7 +3,7 @@
   value: 'blazer-cars-lab'
 - op: replace
   path: '/spec/platform/agentBareMetal/agentSelector/matchLabels/cluster-name'
-  value: 'blazer'
+  value: 'blazer-cars-lab'
 - op: replace
   path: /spec/clusterName
   value: 'blazer'

@@ -1,6 +1,6 @@
 - op: replace
   path: /spec/clusterRef/name
-  value: 'blazer'
+  value: 'blazer-cars-lab'
 - op: replace
   path: /spec/clusterRef/namespace
   value: 'blazer-cars-lab'
