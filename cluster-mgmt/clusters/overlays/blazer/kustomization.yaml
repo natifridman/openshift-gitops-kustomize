@@ -27,7 +27,7 @@ patches:
         value: 'blazer-cars-lab'
       - op: replace
         path: /metadata/name
-        value: 'blazer'
+        value: 'blazer-cars-lab'
   - target:
       kind: SealedSecret
     patch: |-
