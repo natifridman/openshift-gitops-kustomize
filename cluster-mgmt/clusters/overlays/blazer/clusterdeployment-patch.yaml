@@ -12,4 +12,4 @@
   value: 'assisted-deployment-pull-secret'
 - op: replace
   path: /metadata/name
-  value: blazer
+  value: blazer-cars-lab

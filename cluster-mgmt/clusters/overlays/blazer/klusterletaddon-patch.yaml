@@ -6,5 +6,5 @@
   value: 'blazer-cars-lab'
 - op: replace
   path: /metadata/name
-  value: blazer
+  value: blazer-cars-lab
   
