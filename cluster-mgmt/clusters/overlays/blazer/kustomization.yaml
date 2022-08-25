@@ -60,7 +60,7 @@ patches:
     patch: |-
       - op: replace
         path: /metadata/name
-        value: 'blazer'
+        value: 'blazer-cars-lab'
   - target:
       kind: BareMetalHost
       name: super1
