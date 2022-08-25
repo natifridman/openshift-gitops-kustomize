@@ -24,7 +24,7 @@ patches:
     patch: |-
       - op: replace
         path: /spec/clusterDeploymentRef/name
-        value: 'blazer'
+        value: 'blazer-cars-lab'
       - op: replace
         path: /metadata/name
         value: 'blazer'
