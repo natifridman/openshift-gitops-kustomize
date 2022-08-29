@@ -4,6 +4,8 @@ metadata:
   name: openshift-gitops
   namespace: openshift-gitops
 spec:
+  notifications:
+    enabled: true
   applicationSet:
     resources:
       limits:
